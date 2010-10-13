@@ -18,7 +18,7 @@ class ShortnUrl
 
     short_url = @doc.xpath("urls/records/url[full_url='#{s}']/short_url").text
     if short_url.empty? then
-      node = @doc.xpath("urls/records/url[@id='#{@next_id.to_s}']")[0]
+      node = doc.xpath("urls/records/url[@id='#{@next_id.to_s}']")[0]
       node.xpath('full_url')[0].content = s
 
       node['last_modified'] = Time.now.to_s
