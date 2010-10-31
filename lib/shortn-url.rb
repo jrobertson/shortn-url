@@ -5,7 +5,8 @@
 require 'nokogiri'
 
 class ShortnUrl
-
+  attr_reader :doc
+  
   def initialize(opt={}, app_mgr=nil)
     @filepath = opt[:filepath]
     @doc = Nokogiri::XML(File.open(@filepath,'r').read)
