@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 # file: shortn-url.rb
 
@@ -7,8 +7,8 @@ require 'nokogiri'
 class ShortnUrl
   attr_reader :doc
   
-  def initialize(opt={}, app_mgr=nil)
-    @filepath = opt[:filepath]
+  def initialize(filepath)
+    @filepath = filepath
     @doc = Nokogiri::XML(File.open(@filepath,'r').read)
     node = @doc.xpath("urls/records/url[full_url='']")[0]
     @next_id = node.attribute('id').value.to_i
