@@ -18,7 +18,7 @@
     snurl.short_url('ae')
     #=> "http://forrst.com/posts/Ban_IP_addresses_from_Asterisk-XDH"
 
-Note: To crete the 'surl.xml' file you can use the short-url-creator gem.
+Note: To create the 'surl.xml' file you can use the short-url-creator gem.
 
 ## Resources
 
